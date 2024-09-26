@@ -1,3 +1,10 @@
+import Camera from './components/Camera';
+
 export default function Home() {
-  return <div>See you soon!</div>
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <h1 className="text-4xl font-bold mb-8">Emotion Detection App</h1>
+      <Camera />
+    </main>
+  );
 }
