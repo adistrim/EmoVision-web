@@ -20,6 +20,7 @@ pip3 install -r requirements.txt    # pip3 or pip depending on your system confi
 ```bash
 uvicorn app.main:app --reload
 ```
+Backend server will be running at `http://localhost:8000`
 
 ### next-client (frontend)
 ```bash
@@ -28,16 +29,22 @@ npm install
 npm run dev
 ```
 
-#### Docker
+### Docker
 1. Build the image
 ```bash
-cd server
-docker build -t emovision-server .
+cd fastapi-server
+docker build -t emovision-server .  
 ```
 2. Run the container
 ```bash
-docker run --env-file .env -p 8000:8000 emovision-server
+docker run -d --name emovision-server-container --env-file .env -p 8000:8000 emovision-server
 ```
+`Detached mode`
+```bash
+docker run --name emovision-server-container --env-file .env -p 8000:8000 emovision-server
+```
+`Interactive mode`
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
