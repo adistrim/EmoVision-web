@@ -21,6 +21,13 @@ pip3 install -r requirements.txt    # pip3 or pip depending on your system confi
 uvicorn app.main:app --reload
 ```
 
+### next-client (frontend)
+```bash
+cd next-client
+npm install
+npm run dev
+```
+
 #### Docker
 1. Build the image
 ```bash
