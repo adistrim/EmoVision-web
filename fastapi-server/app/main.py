@@ -9,7 +9,8 @@ load_dotenv()
 app = FastAPI()
 
 origins = [
-    os.getenv("ORIGIN_URL")
+    os.getenv("ORIGIN_URL_DEV"),
+    os.getenv("ORIGIN_URL_PROD")
 ]
 
 app.add_middleware(
